@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtliQ Motors Recommendations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; /* Light green background */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #388e3c; /* Dark green */
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4caf50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #388e3c; /* Darker green on hover */
+        }
+        .recommendation {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #4caf50; /* Green border */
+            border-radius: 5px;
+            background-color: #f1f8e9; /* Light green background for recommendations */
+        }
+    </style>
+    <script>
+        function toggleRecommendation(id) {
+            const selectedRec = document.getElementById(id);
+            const isVisible = selectedRec.style.display === 'block';
+
+            // Hide all recommendations
+            const recommendations = document.querySelectorAll('.recommendation');
+            recommendations.forEach(rec => rec.style.display = 'none');
+
+            // Show the selected recommendation only if it was not visible
+            if (!isVisible) {
+                selectedRec.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>AtliQ Motors Recommendations</h1>
+    
+    <button onclick="toggleRecommendation('charging')">Build More Charging Stations</button>
+    <button onclick="toggleRecommendation('eco')">Promote Eco-Friendly Benefits</button>
+    <button onclick="toggleRecommendation('payment')">Offer Easy Payment Options</button>
+
+    <div id="charging" class="recommendation">
+        <h2>1. Build More Charging Stations</h2>
+        <p><strong>What to Do:</strong> Partner with the government and companies to set up more charging stations.</p>
+        <p><strong>Why:</strong> Having plenty of charging spots makes it easier for people to buy and use electric vehicles (EVs).</p>
+    </div>
+    
+    <div id="eco" class="recommendation">
+        <h2>2. Promote Eco-Friendly Benefits</h2>
+        <p><strong>What to Do:</strong> Run ads that highlight how EVs help the environment.</p>
+        <p><strong>Why:</strong> Many people care about climate change, so showing that AtliQ Motors is eco-friendly can attract more customers.</p>
+    </div>
+    
+    <div id="payment" class="recommendation">
+        <h2>3. Offer Easy Payment Options</h2>
+        <p><strong>What to Do:</strong> Provide flexible financing and trade-in deals for customers.</p>
+        <p><strong>Why:</strong> EVs can be expensive, so making it easier to pay can encourage more people to buy them.</p>
+    </div>
+</div>
+
+</body>
+</html>

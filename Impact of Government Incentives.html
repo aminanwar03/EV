@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Government Incentives on EV Adoption</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9; /* Light green background */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32; /* Dark green */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            border: 2px solid #388e3c; /* Teal green */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .section-title {
+            background-color: #00796b; /* Dark teal */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content {
+            padding: 15px;
+            display: none;
+            background-color: #e0f2f1; /* Light teal */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Impact of Government Incentives on EV Adoption</h1>
+        
+        <div class="section">
+            <div class="section-title" onclick="toggleContent('impactContent')">
+                <span>How Government Incentives and Subsidies Impact EV Adoption</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div id="impactContent" class="content">
+                <ul>
+                    <li><strong>Lower Prices:</strong> Subsidies reduce the cost of buying electric vehicles (EVs), making them cheaper for buyers.</li>
+                    <li><strong>More Awareness:</strong> Government promotions help people learn about the benefits of EVs, increasing interest.</li>
+                    <li><strong>Better Charging Stations:</strong> Funding for charging infrastructure makes it easier for people to charge their EVs, reducing worries about running out of battery.</li>
+                    <li><strong>Tax Breaks:</strong> Tax incentives make buying EVs more attractive by saving buyers money.</li>
+                    <li><strong>Encouraging Businesses:</strong> Incentives for companies to switch to electric fleets lead to more visible EVs on the road.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title" onclick="toggleContent('statesContent')">
+                <span>States in India with the Most Subsidies</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div id="statesContent" class="content">
+                <ul>
+                    <li><strong>Delhi:</strong> Offers strong incentives for both 2-wheelers and 4-wheelers.</li>
+                    <li><strong>Maharashtra:</strong> Provides significant subsidies under its EV policy.</li>
+                    <li><strong>Tamil Nadu:</strong> Has good subsidy schemes, especially for electric 2-wheelers.</li>
+                    <li><strong>Karnataka:</strong> Supports EV adoption with various incentives for both types of vehicles.</li>
+                    <li><strong>Uttar Pradesh:</strong> Introduces subsidies to encourage buying electric 2-wheelers and 4-wheelers.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Electric Vehicle Insights
+    </footer>
+
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            const isVisible = content.style.display === "block";
+            content.style.display = isVisible ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
